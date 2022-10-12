@@ -3,7 +3,7 @@ import java.io.*;
 public class mainclass {
     public static void main(String[] args) throws IOException {
     BufferedReader r = new BufferedReader(new InputStreamReader(System.in));
-    String tglKembali = " ";
+    String tglKembali = null;
       int total = 0;
       while (true){
           System.out.println("---Pesan Tiket---");
@@ -21,6 +21,8 @@ public class mainclass {
             if (r.readLine().equalsIgnoreCase("Y")) {
                 System.out.print("Tanggal kembali : ");
                 tglKembali = r.readLine();
+            }else {
+                tglKembali = " ";
             }
             System.out.println("");
             System.out.println("-- Pilih Maskapai Penerbangan --");
@@ -61,10 +63,16 @@ public class mainclass {
                         System.out.println("Kota Asal : " + lionair[i2].getBandaraAsal());
                         System.out.println("Kota Tujuan : " + lionair[i2].getTujuan());
                         System.out.println("Tanggal berangkat : " + lionair[i2].getTgl_berangkat());
+                        if (tglKembali.equalsIgnoreCase(" ")){
+                        System.out.println("Nomor pesawat : " + lionair[i2].getNomorPesawat());
+                        System.out.println("Nomor kursi : " + lionair[i2].getNoKursi());
+                        System.out.println("Harga tiket : " + lionair[i2].getHarga());
+                        }else {
                         System.out.println("Tanggal kembali : " + lionair[i2].getTgl_kembali());
                         System.out.println("Nomor pesawat : " + lionair[i2].getNomorPesawat());
                         System.out.println("Nomor kursi : " + lionair[i2].getNoKursi());
                         System.out.println("Harga tiket : " + lionair[i2].getHarga());
+                        }
                         total = lionair[i2].getTotal();
                         System.out.println("");
                     }
@@ -106,10 +114,18 @@ public class mainclass {
                         System.out.println("Kota Asal : " + citilink[i2].getBandaraAsal());
                         System.out.println("Kota Tujuan : " + citilink[i2].getTujuan());
                         System.out.println("Tanggal berangkat : " + citilink[i2].getTgl_berangkat());
+                        if (tglKembali.equalsIgnoreCase(" ")){
+                        System.out.println("Nomor pesawat : " + citilink[i2].getNomorPesawat());
+                        System.out.println("Nomor kursi : " + citilink[i2].getNoKursi());
+                        System.out.println("Harga tiket : " + citilink[i2].getHarga());
+                        }else {
                         System.out.println("Tanggal kembali : " + citilink[i2].getTgl_kembali());
                         System.out.println("Nomor pesawat : " + citilink[i2].getNomorPesawat());
                         System.out.println("Nomor kursi : " + citilink[i2].getNoKursi());
                         System.out.println("Harga tiket : " + citilink[i2].getHarga());
+                        }
+                        
+                        
                         total = citilink[i2].getTotal();
                         System.out.println("");
                     }
