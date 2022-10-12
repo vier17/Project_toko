@@ -4,7 +4,7 @@ public class tiket {
     private String bandaraAsal;
     private String bookingID;
 
-    /* renamed from: jk */
+
     private String f1jk;
     private String nama;
     private String nik;
